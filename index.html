@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pabl’OBarber — Barbier à Romorantin-Lanthenay · Taper à 5 €</title>
+  <meta name="description" content="Pabl’OBarber, barbier à Romorantin-Lanthenay. Tapers et dégradés à 5 €, uniquement sur rendez-vous. Réserve ton créneau en ligne en 30 secondes.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://pablobarber.github.io/">
+
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Pabl’OBarber">
+  <meta property="og:title" content="Pabl’OBarber — Barbier à Romorantin-Lanthenay">
+  <meta property="og:description" content="Tapers et dégradés à 5 €, sur rendez-vous. Réserve ton créneau en ligne.">
+  <meta property="og:url" content="https://pablobarber.github.io/">
+  <meta property="og:image" content="https://pablobarber.github.io/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo Pabl’OBarber, barbier à Romorantin-Lanthenay">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Active les styles JS ; si script.js ne se charge pas, on revient à l'affichage sans animation -->
+  <script>
+    document.documentElement.classList.add('js', 'js-reveal');
+    try { // thème choisi précédemment, sinon préférence du système (posé avant l'affichage : pas de flash)
+      var t = localStorage.getItem('pb-theme');
+      if (!t && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+    setTimeout(function () { if (!window.PB_READY) document.documentElement.classList.remove('js', 'js-reveal'); }, 3000);
+  </script>
+  <script src="script.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Pabl’OBarber",
+    "url": "https://pablobarber.github.io/",
+    "image": "https://pablobarber.github.io/images/og-image.jpg",
+    "areaServed": "Romorantin-Lanthenay",
+    "priceRange": "5 €",
+    "paymentAccepted": "Espèces, Wero",
+    "sameAs": ["https://www.instagram.com/pablo.barb3r/"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner container">
+      <a href="#accueil" class="logo" aria-label="Pabl’OBarber — retour à l'accueil">
+        <img class="logo__mark" src="images/logo-mark.png" alt="" width="38" height="38">
+        <span class="logo__text" aria-hidden="true">Pabl’OBarber</span>
+      </a>
+
+      <div class="navbar__tools">
+        <button class="theme-toggle" type="button" aria-label="Activer le mode sombre">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        </button>
+        <button class="burger" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+          <span class="burger__bar"></span>
+          <span class="burger__bar"></span>
+          <span class="burger__bar"></span>
+        </button>
+      </div>
+
+      <nav class="nav" id="nav-menu" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#a-propos">À propos</a></li>
+          <li><a class="nav__link" href="#tarifs">Tarifs</a></li>
+          <li><a class="nav__link" href="#vitrine">Vitrine</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn--accent btn--sm js-book">
+          <i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Réserver
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== ACCUEIL ===== -->
+    <section class="hero" id="accueil" aria-labelledby="hero-title">
+      <div class="hero__pole" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <p class="eyebrow reveal">Barbier · Romorantin-Lanthenay · Sur rendez-vous</p>
+        <h1 class="hero__title reveal" id="hero-title">
+          <span class="hero__line">Pabl’O</span>
+          <span class="hero__line hero__line--outline">Barber</span>
+        </h1>
+        <p class="hero__lead reveal">Dégradés nets, contours précis, zéro attente. Tu choisis ton créneau, je m'occupe du reste.</p>
+        <div class="hero__actions reveal">
+          <a href="#contact" class="btn btn--accent btn--lg js-book">
+            <i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Réserver
+          </a>
+          <a href="#vitrine" class="btn btn--ghost btn--lg">Voir les coupes</a>
+        </div>
+        <ul class="hero__facts reveal">
+          <li><strong>5&nbsp;€</strong> tarif unique</li>
+          <li><strong>Taper</strong> spécialité</li>
+          <li><strong>Romorantin</strong> &amp; alentours</li>
+        </ul>
+      </div>
+
+      <a href="#a-propos" class="hero__scroll" aria-label="Défiler vers la section À propos"><span></span></a>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group"><span>Taper</span><i>✦</i><span>Dégradé</span><i>✦</i><span>Contours</span><i>✦</i><span>5 €</span><i>✦</i><span>Sur RDV</span><i>✦</i><span>Taper</span><i>✦</i><span>Dégradé</span><i>✦</i><span>Contours</span><i>✦</i><span>5 €</span><i>✦</i><span>Sur RDV</span><i>✦</i><span>Taper</span><i>✦</i><span>Dégradé</span><i>✦</i><span>Contours</span><i>✦</i><span>5 €</span><i>✦</i><span>Sur RDV</span><i>✦</i></div>
+        <div class="marquee__group"><span>Taper</span><i>✦</i><span>Dégradé</span><i>✦</i><span>Contours</span><i>✦</i><span>5 €</span><i>✦</i><span>Sur RDV</span><i>✦</i><span>Taper</span><i>✦</i><span>Dégradé</span><i>✦</i><span>Contours</span><i>✦</i><span>5 €</span><i>✦</i><span>Sur RDV</span><i>✦</i><span>Taper</span><i>✦</i><span>Dégradé</span><i>✦</i><span>Contours</span><i>✦</i><span>5 €</span><i>✦</i><span>Sur RDV</span><i>✦</i></div>
+      </div>
+    </div>
+
+    <!-- ===== À PROPOS ===== -->
+    <section class="section section--light" id="a-propos" aria-labelledby="apropos-title">
+      <div class="container concept">
+        <figure class="concept__media reveal">
+          <img src="images/logo.jpg" alt="Logo Pabl’OBarber : monogramme PB blanc sur fond bleu nuit" width="900" height="900" loading="lazy" decoding="async" data-fallback>
+          <figcaption>Romorantin-Lanthenay</figcaption>
+        </figure>
+
+        <div class="concept__content">
+          <p class="eyebrow reveal">À propos</p>
+          <h2 class="section-title reveal" id="apropos-title">Un barbier, une chaise, <span>ton créneau.</span></h2>
+          <div class="concept__text reveal">
+            <p>Moi c'est Pablo. Je coupe depuis un an — d'abord les potes, puis les potes des potes. Aujourd'hui je suis étudiant et barbier à Romorantin-Lanthenay, et ma spécialité, c'est le taper.</p>
+            <p>Ma façon de bosser&nbsp;: on parle de ce que tu veux avant de commencer, je prends le temps sur les transitions et tu ne repars pas tant que les contours ne sont pas nets. Une personne à la fois, jamais de rush.</p>
+          </div>
+
+          <ul class="features">
+            <li class="feature reveal">
+              <span class="feature__icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
+              <div>
+                <h3>Où je reçois</h3>
+                <p>Romorantin-Lanthenay et alentours.</p>
+              </div>
+            </li>
+            <li class="feature reveal">
+              <span class="feature__icon" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></span>
+              <div>
+                <h3>Uniquement sur rendez-vous</h3>
+                <p>Pas de file d'attente&nbsp;: tu réserves en ligne, je suis prêt à ton arrivée.</p>
+              </div>
+            </li>
+            <li class="feature reveal">
+              <span class="feature__icon" aria-hidden="true"><i class="fa-solid fa-spray-can-sparkles"></i></span>
+              <div>
+                <h3>Matériel nickel</h3>
+                <p>Outils désinfectés entre chaque client, lame neuve à chaque rasage.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="pole" aria-hidden="true"></div>
+
+    <!-- ===== TARIFS ===== -->
+    <section class="section section--dark" id="tarifs" aria-labelledby="tarifs-title">
+      <div class="container container--narrow">
+        <header class="section-head">
+          <p class="eyebrow reveal">Tarifs</p>
+          <h2 class="section-title reveal" id="tarifs-title">Un seul tarif, <span>zéro supplément.</span></h2>
+        </header>
+
+        <div class="price-card reveal">
+          <p class="price-card__amount">5&nbsp;€</p>
+          <p class="price-card__label">la coupe</p>
+        </div>
+
+        <div class="payments reveal">
+          <h3 class="payments__title">Paiements acceptés</h3>
+          <ul class="payments__list">
+            <li><i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i> Espèces</li>
+            <li><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> Wero</li>
+          </ul>
+        </div>
+
+        <div class="section-cta reveal">
+          <a href="#contact" class="btn btn--accent btn--lg js-book">
+            <i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Réserver
+          </a>
+          <p class="section-cta__note">Paiement sur place après la coupe</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VITRINE ===== -->
+    <section class="section section--light" id="vitrine" aria-labelledby="vitrine-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal">Vitrine</p>
+          <h2 class="section-title reveal" id="vitrine-title">Le travail, <span>en vrai.</span></h2>
+          <p class="section-intro reveal">Des coupes que j'ai réalisées, sans filtre. Touche une photo pour l'agrandir.</p>
+        </header>
+
+        <!-- Filtres et coupes générés par script.js à partir du tableau CUTS -->
+        <div class="filters reveal" id="filters" role="group" aria-label="Filtrer par type de coupe"></div>
+        <p class="sr-only" id="gallery-status" role="status" aria-live="polite"></p>
+        <div class="cuts" id="cuts"></div>
+
+        <noscript>
+          <p class="noscript">La vitrine a besoin de JavaScript. Retrouve toutes mes coupes sur <a href="https://www.instagram.com/pablo.barb3r/">Instagram</a>.</p>
+        </noscript>
+
+        <p class="vitrine__more reveal">
+          Plus de coupes chaque semaine sur
+          <a href="https://www.instagram.com/pablo.barb3r/" target="_blank" rel="noopener">Instagram</a>.
+        </p>
+      </div>
+    </section>
+
+    <div class="pole" aria-hidden="true"></div>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section section--dark" id="contact" aria-labelledby="contact-title">
+      <div class="container container--narrow contact">
+        <p class="eyebrow reveal">Contact</p>
+        <h2 class="section-title reveal" id="contact-title">Une question&nbsp;? <span>Écris-moi.</span></h2>
+        <p class="reveal">Coupe spéciale, groupe pour un événement, question sur une prestation&nbsp;: envoie-moi un message sur Instagram, je réponds vite. Pour réserver, le plus rapide reste l'agenda en ligne.</p>
+        <div class="contact__actions reveal">
+          <a href="#contact" class="btn btn--accent btn--lg js-book">
+            <i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Réserver
+          </a>
+          <a href="https://www.instagram.com/pablo.barb3r/" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i> @pablo.barb3r
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#accueil" class="logo" aria-label="Pabl’OBarber — retour à l'accueil">
+          <img class="logo__mark" src="images/logo-mark.png" alt="" width="38" height="38">
+          <span class="logo__text" aria-hidden="true">Pabl’OBarber</span>
+        </a>
+        <p>Barbier à Romorantin-Lanthenay. Tapers et dégradés à 5&nbsp;€, uniquement sur rendez-vous.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Raccourcis">
+        <h2 class="footer__title">Raccourcis</h2>
+        <ul>
+          <li><a href="#a-propos">À propos</a></li>
+          <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#vitrine">Vitrine</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__social">
+        <h2 class="footer__title">Me suivre</h2>
+        <ul class="socials">
+          <li><a href="https://www.instagram.com/pablo.barb3r/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> Pabl’OBarber. Tous droits réservés.</p>
+      <a href="#accueil" class="footer__top">Haut de page <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+    </div>
+  </footer>
+
+  <!-- Bouton flottant (mobile) -->
+  <a href="#contact" class="fab js-book">
+    <i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Réserver
+  </a>
+
+  <!-- ===== MODALE CALENDLY ===== -->
+  <div class="modal" id="booking-modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="booking-title" tabindex="-1">
+      <header class="modal__header">
+        <h2 class="modal__title" id="booking-title">Réserver un créneau</h2>
+        <button class="icon-btn" type="button" data-close aria-label="Fermer la réservation">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </header>
+      <div class="modal__body">
+        <div class="booking-loader" id="booking-loader">
+          <span class="spinner" aria-hidden="true"></span>
+          <span>Chargement de l'agenda…</span>
+        </div>
+        <div class="booking-widget" id="booking-widget"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox__backdrop" data-close></div>
+    <div class="lightbox__panel" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" tabindex="-1">
+      <button class="icon-btn lightbox__close" type="button" data-close aria-label="Fermer la visionneuse">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <figure class="lightbox__figure">
+        <div class="lightbox__stage" id="lightbox-stage"></div>
+        <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
+      </figure>
+      <button class="icon-btn lightbox__nav lightbox__nav--prev" type="button" data-step="-1" aria-label="Média précédent">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn lightbox__nav lightbox__nav--next" type="button" data-step="1" aria-label="Média suivant">
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</body>
+</html>
